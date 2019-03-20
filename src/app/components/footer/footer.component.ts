@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { headersToString } from 'selenium-webdriver/http';
+import { Store } from '@ngrx/store';
+import { State, selectCurrent } from 'src/app/reducers';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +12,14 @@ import { headersToString } from 'selenium-webdriver/http';
 
 })
 
-export class FooterComponent {
+export class FooterComponent implements OnInit {
+
+  count$: Observable<number>;
+  constructor(private store: Store<State>) { }
+
+  ngOnInit() {
+
+    this.count$ = this.store.select(selectCurrent);
+  }
 
 }

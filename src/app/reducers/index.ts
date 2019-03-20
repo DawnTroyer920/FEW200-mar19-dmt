@@ -24,4 +24,6 @@ export const selectCurrent = createSelector(selectCounterBranch, c => c.count);
 
 export const selectCountingBy = createSelector(selectCounterBranch, c => c.by);
 
-export const selectAtStart = createSelector(selectCurrent, c => c === 0);
+export const selectDecrementDisabled = createSelector(selectCurrent, selectCountingBy, (c, b) => (c - b) < 0);
+
+export const selectResetDisabled = createSelector(selectCurrent, c => c === 0);
