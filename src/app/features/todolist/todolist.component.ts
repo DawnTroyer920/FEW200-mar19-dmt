@@ -16,6 +16,7 @@ export class TodolistComponent implements OnInit {
   constructor(private store: Store<State>) { }
 
   ngOnInit() {
+    this.todoList$ = this.store.select(selectTodoItems);
   }
 
 }
