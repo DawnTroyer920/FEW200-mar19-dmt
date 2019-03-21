@@ -15,6 +15,8 @@ import { reducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { CounterEffects } from './effects/counter.effects';
 import { TodolistModule } from './features/todolist/todolist.module';
+import { BooksModule } from './features/books/books.module';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { TodolistModule } from './features/todolist/todolist.module';
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([CounterEffects]),
-    TodolistModule  // can be removed for production
+    TodolistModule,
+    BooksModule  // can be removed for production
   ],
   providers: [],
   bootstrap: [AppComponent]
