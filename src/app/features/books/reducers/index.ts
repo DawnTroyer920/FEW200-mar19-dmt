@@ -27,3 +27,5 @@ const selectBook = createSelector(selectFeature, f => f.books);
 const { selectAll: selectBookEntities } = fromBook.adapter.getSelectors(selectBook);
 
 export const selectBooks = createSelector(selectBookEntities, e => e as BookItem[]);
+
+export const selectBookTypes = createSelector(selectBook, b => b.bookTypes);

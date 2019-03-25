@@ -3,7 +3,7 @@
 </header>
 <div class="row">
   <div class="col">
-    <app-bookentry> </app-bookentry>
+    <app-bookentry [types]="types$ | async"> </app-bookentry>
   </div>
   <div class="col">
     <app-booklist [books]="books$ | async"> </app-booklist>
