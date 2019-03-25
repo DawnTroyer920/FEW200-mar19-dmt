@@ -6,13 +6,10 @@
   <input class="form-control"
          #author><br>
   <label>Type</label>
-  <select #type>
-    <option value="paperback"
-            #paperback>Paperback</option>
-    <option value="hardcover"
-            #hardcover>Hard Cover</option>
-    <option value="ebook"
-            #hardcover>E-Book</option>
+  <select class="form-control"
+          #type>
+    <option *ngFor="let type of types"
+            value="type">{{type}}</option>
   </select>
   <br>
   <input type="button"

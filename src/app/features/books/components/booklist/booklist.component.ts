@@ -5,7 +5,7 @@ import { BookItem } from '../../models';
   selector: 'app-booklist',
   templateUrl: './booklist.component.html',
   styleUrls: ['./booklist.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush // Nice!
 })
 export class BooklistComponent implements OnInit {
 

@@ -33,10 +33,10 @@ import { BooksModule } from './features/books/books.module';
     CommunicationsModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument(),
+    StoreDevtoolsModule.instrument(), // can be removed for productio
     EffectsModule.forRoot([CounterEffects]),
     TodolistModule,
-    BooksModule  // can be removed for production
+    BooksModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

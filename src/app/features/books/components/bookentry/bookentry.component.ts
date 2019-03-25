@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { State } from '../../reducers';
 import { AddedBook } from '../../actions/book.actions';
@@ -6,12 +6,14 @@ import { AddedBook } from '../../actions/book.actions';
 @Component({
   selector: 'app-bookentry',
   templateUrl: './bookentry.component.html',
-  styleUrls: ['./bookentry.component.css']
+  styleUrls: ['./bookentry.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookentryComponent implements OnInit {
 
   constructor(private store: Store<State>) { }
 
+  @Input() types: string[];
   ngOnInit() {
   }
 
