@@ -9,6 +9,7 @@ export interface BookEntity {
   id: string;
   title: string;
   author: string;
+  type: string;
 }
 
 
@@ -22,9 +23,9 @@ export const adapter = createEntityAdapter<BookEntity>();
 const initialState: State = {
   ids: ['1', '2', '3'],
   entities: {
-    1: { id: '1', title: 'Moby Dick', author: 'Herman Melville' },
-    2: { id: '2', title: 'War and Peace', author: 'Leo Tolstoy' },
-    3: { id: '3', title: 'Little Women', author: 'Louisa May Alcott' }
+    1: { id: '1', title: 'Moby Dick', author: 'Herman Melville', type: 'Hard Cover' },
+    2: { id: '2', title: 'War and Peace', author: 'Leo Tolstoy', type: 'Paperback' },
+    3: { id: '3', title: 'Little Women', author: 'Louisa May Alcott', type: 'Paperback' }
   }
 };
 

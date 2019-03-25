@@ -4,7 +4,7 @@ import * as fromBook from './book';
 import { BookItem } from '../models';
 
 
-const featureName = 'bookFeature';
+const featureName = 'booksFeature';
 
 export interface State {
   books: fromBook.State;

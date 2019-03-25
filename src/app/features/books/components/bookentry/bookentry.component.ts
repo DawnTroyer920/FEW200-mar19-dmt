@@ -15,11 +15,12 @@ export class BookentryComponent implements OnInit {
   ngOnInit() {
   }
 
-  add(booktitle: HTMLInputElement, bookauthor: HTMLInputElement) {
+  add(booktitle: HTMLInputElement, bookauthor: HTMLInputElement, booktype: HTMLInputElement) {
     // Dispatch an action
-    this.store.dispatch(new AddedBook(booktitle.value, bookauthor.value));
+    this.store.dispatch(new AddedBook(booktitle.value, bookauthor.value, booktype.value));
     booktitle.value = '';
     bookauthor.value = '';
+    booktype.value = '';
     booktitle.focus();
 
   }

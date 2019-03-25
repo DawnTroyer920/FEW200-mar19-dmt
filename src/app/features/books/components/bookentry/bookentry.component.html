@@ -4,10 +4,17 @@
          #book>
   <label>Author</label>
   <input class="form-control"
-         #author>
-
+         #author><br>
+  <label>Type</label>
+  <select #type>
+    <option value="paperback"
+            #paperback>Paperback</option>
+    <option value="hardcover"
+            #hardcover>Hard Cover</option>
+  </select>
+  <br>
   <input type="button"
          class="btn btn-primary"
-         (click)="add(book,author)"
+         (click)="add(book,author,type)"
          value="Add">
 </div>
