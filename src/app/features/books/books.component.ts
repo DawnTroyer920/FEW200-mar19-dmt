@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { State, selectBooks } from './reducers';
 import { Observable } from 'rxjs';
-import { Book } from './models';
+import { BookItem } from './models';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { Book } from './models';
 })
 export class BooksComponent implements OnInit {
 
-  books$: Observable<Book[]>;
+  books$: Observable<BookItem[]>;
   constructor(private store: Store<State>) { }
 
   ngOnInit() {

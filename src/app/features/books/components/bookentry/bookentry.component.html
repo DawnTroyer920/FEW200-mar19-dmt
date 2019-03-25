@@ -1,9 +1,13 @@
 <div class="form-group">
-  <label>Book</label>
+  <label>Book Title</label>
   <input class="form-control"
          #book>
+  <label>Author</label>
+  <input class="form-control"
+         #author>
+
   <input type="button"
          class="btn btn-primary"
-         (click)="add(book)"
+         (click)="add(book,author)"
          value="Add">
 </div>
